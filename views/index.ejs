@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/home.css">
 </head>
 <body>
-    <h1>Contact List</h1>
-    <div>
-        <ul>
+    
+    <h1 id="page-heading"><i class="fa fa-address-book"></i> My Contacts List</h1>
+    <div id="contact-container">
+        <ul type='none'>
             <% for(let i of contact_list){ %>
                 
-                <li>
-                    <p><%= i.name %></p>
-                    <p><%= i.phone %></p>
+                <li class="contact">
+                    <div class="details">
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                        <div>
+                            <a href=""><i class="fa fa-window-close"></i></i></a>
+                        </div>
+                    </div>
+                    
+                    
                 </li>
                 
                 
             <%}%>
         </ul>
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter Number" required>
+            <button type="submit" id="add-button">Add</button>
+        </form>
     </div>
-    <form action="/create-contact" method="POST">
-        <input type="text" name="name" placeholder="Enter name" required>
-        <input type="number" name="phone" placeholder="Enter Number" required>
-        <button type="submit">Create Contact!</button>
-    </form>
+    
     <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>

@@ -1,3 +1,48 @@
 body{
-text-align: center;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+#page-heading{
+    color: grey;;
+    margin-top: 25px;
+    text-align: center;
+}
+#contact-container{
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+    margin: 3px;
+}
+
+ul{
+    padding-left: 0;
+}
+.contact{
+    background-color: rgb(73, 167, 224);
+    margin: 3px;
+    color: white;
+    /* padding: 5px; */
+    font-size: 1.2rem;
+}
+.contact :hover {
+    background-color: grey;
+}
+
+form input{
+    border: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid lightgrey;
+}
+#add-button{
+    background-color: rgb(45, 132, 202);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
 }
