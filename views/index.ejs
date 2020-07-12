@@ -11,16 +11,17 @@
     
     <h1 id="page-heading"><i class="fa fa-address-book"></i> My Contacts List</h1>
     <div id="contact-container">
-        <ul type='none'>
+        <ul type="round">
             <% for(let i of contact_list){ %>
                 
                 <li class="contact">
                     <div class="details">
                         <p><%= i.name %></p>
                         <p><%= i.phone %></p>
-                        <div>
-                            <a href=""><i class="fa fa-window-close"></i></i></a>
-                        </div>
+                        
+                    </div>
+                    <div id="delete-button">
+                        <a href="/delete-contact/?phone=<%=i.phone%>"><i class="fa fa-window-close"></i></i></a>
                     </div>
                     
                     

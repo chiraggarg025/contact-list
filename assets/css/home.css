@@ -10,39 +10,50 @@ body{
 }
 #contact-container{
     text-align: center;
-    width: 40%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
-.details{
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.5s;
-    margin: 3px;
-}
-
 ul{
     padding-left: 0;
-}
+} 
 .contact{
     background-color: rgb(73, 167, 224);
     margin: 3px;
     color: white;
-    /* padding: 5px; */
     font-size: 1.2rem;
+    display: flex;
 }
 .contact :hover {
     background-color: grey;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px;
+    background-color: inherit;
+    width: 90%;
+}
+#delete-button{
+    width: 10%;
+    text-align: center;
+    margin-top: 15px;
+}
+#delete-button a {
+    background-color: red;
+    color: white;
 }
 
 form input{
     border: none;
     font-size: 1.1rem;
     border-bottom: 1px solid lightgrey;
+    padding: 2px;
 }
 #add-button{
-    background-color: rgb(45, 132, 202);
+    background-color: grey;
     color: white;
     border: none;
     font-size: 1.5rem;
+    width: 15%;
 }
