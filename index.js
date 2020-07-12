@@ -28,6 +28,9 @@ app.get('/',function(req,res){
 app.get('/playground',function(req,res){
     return res.render('playing',{title:'My Play list'});
 })
+app.post('/create-contact',function(req,res){
+    return res.redirect('/playground');
+})
 app.listen(port,function(err){
 
     if(err){
