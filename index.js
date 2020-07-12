@@ -5,16 +5,18 @@ const app = express();
 // setting up template engine
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+
 // Middleware (used to manipulate requests)
 app.use(express.urlencoded());
-app.use(function(req,res,next){
-    req.myname='Chanakya';
-    next();
-})
-app.use(function(req,res,next){
-    console.log('from middleware 2 myName = ',req.myname);
-    next();
-})
+app.use(express.static('assets'));
+// app.use(function(req,res,next){
+//     req.myname='Chanakya';
+//     next();
+// })
+// app.use(function(req,res,next){
+//     console.log('from middleware 2 myName = ',req.myname);
+//     next();
+// })
 var contactList = [
     {
         name:'Chanakya',
